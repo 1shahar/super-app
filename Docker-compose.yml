@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  node:
+    build: 
+      context: ./node
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    restart: always
+
+  php:
+    build: 
+      context: ./php
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    restart: always
